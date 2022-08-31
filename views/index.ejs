@@ -8,11 +8,28 @@
 
     <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/skeleton.css" />
-    <title>Document</title>
+    <title>Budgtr</title>
 </head>
 
 <body>
 <h1>Budgtr All</h1>
+<table>
+    <!-- create a foor loop to display budget data -->
+    <% for (let i = 0; i < allBudget.length; i++) {%>
+    <tr>
+        <!-- each row needs three data cells to seperate the info -->
+        <td>
+            <%= allBudget[i].date%>  
+        </td>
+        <td>
+            <a href=""><%=allBudget[i].name %></a>
+        </td>
+        <td>
+            <%=allBudget[i].amount %>
+        </td>
+    </tr>
+    <% } %>
+</table>
 </body>
 
 </html>

@@ -18,7 +18,10 @@ app.use(express.urlencoded({ extended: false }))
 // Index
 
 app.get("/budgets" , (req, res)=>{
-    res.render("index.ejs")
+    res.render("index.ejs" , {
+        allBudget: budget
+        // budget needs to be redeclared so index.ejs can access it
+    })
 })
 
 // New
