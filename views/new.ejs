@@ -8,11 +8,24 @@
 
     <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/skeleton.css" />
-    <title>Document</title>
+    <title>New Budget Item</title>
 </head>
 
 <body>
-<h1>Budgtr New</h1>
+<div class="container">
+<h1> Add New Budget Item</h1>
+<!-- adding a form with a post method so these items are posted to budgets index route -->
+<form action="/budgets" method="POST">
+<input type="text" placeholder="date" name="date"> <br>
+<input type="text" placeholder="name" name="name"> <br>
+<input type="text" placeholder="amount" name="amount"> <br>
+<input type="text" placeholder="from" name="from"> <br>
+<input type="submit" value="Create New Item"> 
+</form>
+<form action="/budgets">
+    <button>Return to Index</button>
+</form>
+</div>
 </body>
 
 </html>
