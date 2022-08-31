@@ -12,7 +12,15 @@ const budget = require("./models/budget")
 
 // Index
 
-// News
+app.get("/budgets" , (req, res)=>{
+    res.send("the index route works")
+})
+
+// New
+
+app.get("/budgets/new", (req, res)=>{
+    res.send("the new route works")
+})
 
 // Delete
 
@@ -23,6 +31,10 @@ const budget = require("./models/budget")
 // Edit
 
 // Show
+
+app.get("/budgets/:index" , (req, res)=>{
+    res.send("the show route works")
+})
 
 
 // LISTENER
