@@ -15,8 +15,10 @@
 
 <body>
 <h1>Budgtr</h1>
+<!-- i was on the right track with my reduce method. i only need to use it though on the existing allBudget array -->
 <% let bankAccount = allBudget.reduce((acc, num)=>{
     return acc + parseInt(num.amount);
+    <!-- shoutout to sarah the ta and ryan for helping with parseInt so info did not display as NaN, this was holding back a lot -->
 }, 0);%>
 <h1><%=bankAccount%></h1>
 
