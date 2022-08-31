@@ -8,18 +8,23 @@ const port = 3000;
 
 const budget = require("./models/budget")
 
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: false }))
+
+
+
 // ROUTES
 
 // Index
 
 app.get("/budgets" , (req, res)=>{
-    res.send("the index route works")
+    res.render("index.ejs")
 })
 
 // New
 
 app.get("/budgets/new", (req, res)=>{
-    res.send("the new route works")
+    res.render("new.ejs")
 })
 
 // Delete
