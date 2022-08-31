@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +15,11 @@
 
 <body>
 <h1>Budgtr</h1>
+<% let bankAccount = allBudget.reduce((acc, num)=>{
+    return acc + parseInt(num.amount);
+}, 0);%>
+<h1><%=bankAccount%></h1>
+
 <table>
     <!-- create a foor loop to display budget data -->
     <% for (let i = 0; i < allBudget.length; i++) {%>
@@ -37,3 +44,4 @@
 </body>
 
 </html>
+
