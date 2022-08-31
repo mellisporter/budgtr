@@ -8,7 +8,10 @@ const port = 3000;
 
 const budget = require("./models/budget")
 
+// only need this since i made a public folder vs. using cdn
 app.use(express.static('public'))
+
+// this is our body parser
 app.use(express.urlencoded({ extended: false }))
 
 
@@ -38,7 +41,9 @@ app.get("/budgets/new", (req, res)=>{
 // need to use post method to add the new data to /budgets
 app.post("/budgets" , function (req, res){
 budget.push(req.body)
-res.send("data received")
+// res.send("data received")
+//  console.log(req.body)
+res.redirect("/budgets")
 })
 
 // Edit
