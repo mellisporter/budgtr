@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<h1>Budgtr All</h1>
+<h1>Budgtr</h1>
 <table>
     <!-- create a foor loop to display budget data -->
     <% for (let i = 0; i < allBudget.length; i++) {%>
@@ -22,7 +22,8 @@
             <%= allBudget[i].date%>  
         </td>
         <td>
-            <a href=""><%=allBudget[i].name %></a>
+            <!-- links to show page for each item -->
+            <a href="/budgets/<%=i%>"><%=allBudget[i].name %></a>
         </td>
         <td>
             <%=allBudget[i].amount %>

@@ -41,7 +41,9 @@ app.get("/budgets/new", (req, res)=>{
 // Show
 
 app.get("/budgets/:index" , (req, res)=>{
-    res.send("the show route works")
+    res.render("show.ejs", {
+        budgetItem: budget[req.params.index]
+    })
 })
 
 

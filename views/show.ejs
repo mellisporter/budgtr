@@ -12,7 +12,22 @@
 </head>
 
 <body>
-<h1>Budgtr Info</h1>
+<div class="container">
+    <h1><%=budgetItem.name%></h1>
+    <!-- even though we did this in class, I used stackoverflow to help add the action to the button -->
+    <form action="/budgets">
+        <button>Back</button>
+    </form>
+    <strong>date</strong> <br>
+        <%=budgetItem.date%> <br>
+    <strong>name</strong> <br>
+    <%=budgetItem.name%> <br>
+    <strong>from</strong> <br>
+    <%=budgetItem.from%><br>
+    <strong>amount</strong> <br>
+    <%=budgetItem.amount%>
+    
+</div>
 </body>
 
 </html>
