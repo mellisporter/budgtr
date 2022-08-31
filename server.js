@@ -35,6 +35,11 @@ app.get("/budgets/new", (req, res)=>{
 // Update
 
 // Create
+// need to use post method to add the new data to /budgets
+app.post("/budgets" , function (req, res){
+budget.push(req.body)
+res.send("data received")
+})
 
 // Edit
 
