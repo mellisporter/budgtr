@@ -20,7 +20,24 @@
     return acc + parseInt(num.amount);
     <!-- shoutout to sarah the ta and ryan for helping with parseInt so info did not display as NaN, this was holding back a lot -->
 }, 0);%>
-<h1><%=bankAccount%></h1>
+<div>
+    <h1 class="bank"><%=bankAccount%></h1>
+</div>
+
+<% if (bankAccount > 0) { %>
+    <style>
+        .bank {
+            color: green;
+        }
+    </style>
+<% } else { %>
+    <style>
+        .bank {
+            color: red;
+        }
+    </style>
+<% } %>
+
 
 <table>
     <!-- create a foor loop to display budget data -->
